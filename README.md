@@ -1,44 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bakerstreet Coder IQ
+675 Town Square Blvd., Suite 200
+Garland, Texas, 75040
+214-235-4413
+https://www.bakerstreet.industries/
+© Bakerstreet Industries 2018
+Submit your name and GIT repository link to jobs@bakerstreet.industries. All responses to these questions should be in a markdown file named readme.md on your GIT repo.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Technical Questions
+Explain the differences between the variable j, if any, and list where these would exist in the DOM.
+var j = 0;						                Answer: j is a variable within current scope (class or function)
+j = 0;						                    Answer: j is a variable within global scope;
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+function j(j) {                                 Answer: (j) is a parameter within function named j
+    return j + j;                               Answer: returns parameter value j+j; EX: if j =2 , this function returns 4
+}
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+var j = function(b) {                           Answer: j is defined as a function. EX: j(4) returns 14
+    return b + 10;
+}
 
-### `npm test`
+function(x) {                                   Answer: this is a Anonymous functions, declared at runtime, 
+    let j = 10;
+    return j * x;
+}
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+//Referenced by <script src=”file.js” />
+var j = 10;                                     Answer: j is a variable has a value of 10
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+What ways could this function be executed?
+var a = function(b) {                           Answer: var a = function(1); document.getElementById("txt").innerHTML = a;
+    return b * 10;
+}
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+What does this function do? How would you unit test this function?
+export default function c(...funcs) {           Answer: This function returns the function name with value.
+  if (funcs.length === 0) {
+    return arg => arg
+  }
 
-### `npm run eject`
+  if (funcs.length === 1) {
+    return funcs[0]
+  }
+  return funcs.reduce((a, b) => (...args) => a(b(...args)))
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Coding Test
+Application name: Elementary
+          Answer: https://github.com/Steven2005A/Elementary
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Summary Questions:
+How did you approach the design of this application?
+          Answer: I have created a /Component folder under /src folder, and all the component JS files are stored under Component folder. it start with a login page. a user can log in with google account through Auth0
+                  Logged in user can view more content of ATS data.
+                  Non Logged in user can only view a partial of ATS data.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Why did you choose the specific events to trigger actions?
+          Answer: all the events are triggered by click event.
 
-## Learn More
+Did you place all state into Redux or was it a combination of React and Redux?
+          Answer: it is a combination.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+How did you get React and Redux to play nicely together?
+          Answer: separate functions into component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+What changes would you make if you had more time to complete this application?
+          Answer: I will make the layout more dynamic and add more content to css
